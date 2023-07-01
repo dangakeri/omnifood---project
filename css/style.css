@@ -258,7 +258,7 @@
   .pricing-plan--starter{
     justify-self: end;
     border: 2px solid #fdf2e9;
-    padding: 4  .6rem;
+    padding: 4.6rem;
   }
   .pricing-plan--complete{
     background-color: #fdf2e9;
@@ -266,11 +266,11 @@
     position: relative;
     overflow: hidden;
   }
-  .pricing-plan--complet::after{
+  .pricing-plan--complete::after{
     content: "Best value";
     position: absolute;
     top: 6%;
-    right: -18%;
+    right: -10%;
 
 
     text-transform: uppercase;
@@ -336,4 +336,46 @@
   .feature-text{
     font-size: 1.8rem;
     line-height: 1.8;
+  }
+  /* ******* */
+  /* CTA section */
+  /* ******** */
+  .section-cta{
+    padding: 9.6rem 0;
+  }
+  .cta{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 2fr 1fr;
+    background-color: #e67e22;
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
+    border-radius: 1.1rem;
+    background-image: linear-gradient(to right bottom,#eb984e, #e67e22);
+
+
+    height: 50rem;
+  }
+  .cta-text-box{
+    padding:  4.8rem 6.4rem;
+    color: #45260a;
+  }
+  .cta-text{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+  }
+  .cta .heading-secondary{
+    color: #45260a; 
+    margin-bottom: 3.2rem;
+  }
+  .cta-img-box{
+    background-image:linear-gradient(rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)) ,url('../img/eating.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .cta-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
   }
