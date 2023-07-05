@@ -49,7 +49,26 @@ allLinks.forEach(function(link){
     headerEl.classList.toggle('nav-open');
     });
 });
-// Fixing flexbox gap property miss ing in some safari versions
+
+// sticky navigation
+const sectionHeroEl= document.querySelector('.section-hero');
+const obs= new IntersectionObserver(function(entries){
+    const ent = entries[0];
+    console.log(ent);
+    if(ent.isIntersecting === false){
+        document.body.classList.add("sticky");
+    }
+    if(ent.isIntersecting === true){
+        document.body.classList.remove("sticky");
+    }
+},
+{
+    root:null,
+    threshold:0,
+    rootMargin:'-80px',
+});
+obs.observe();
+// Fixing flexbox gap property missing in some safari versions
 function checkFlexGap(){
     var flex = document.createElement("div"); 
     flex.style.display="flex";
@@ -63,7 +82,7 @@ function checkFlexGap(){
     var isSupported = flex.scrollHeight === 1;
     flex.parentNode.removeChild(flex);
     console.log(isSupported);
-
+ 
     if(!isSupported)document.body.classList.add("no-flex-gap");
 }
 checkFlexGap();
